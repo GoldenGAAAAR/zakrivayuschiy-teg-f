@@ -24,8 +24,6 @@
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  margin-left: clamp(0rem, -8.1426rem + 34.7418vw, 23.125rem);
-  margin-right: clamp(0rem, -8.1426rem + 34.7418vw, 23.125rem);
 }
 
 .header {
@@ -39,6 +37,8 @@
   border: 2px solid var(--accent-color);
   align-items: center;
   margin-bottom: 100px;
+  margin-left: clamp(0rem, -8.1426rem + 34.7418vw, 23.125rem);
+  margin-right: clamp(0rem, -8.1426rem + 34.7418vw, 23.125rem);
 }
 
 .header__title {
@@ -119,6 +119,8 @@
 .main {
   display: flex;
   flex-direction: column;
+  margin-left: clamp(0rem, -8.1426rem + 34.7418vw, 23.125rem);
+  margin-right: clamp(0rem, -8.1426rem + 34.7418vw, 23.125rem);
 }
 
 .card {
@@ -384,9 +386,24 @@ dialog::backdrop {
 }
 
 @media (width <= 376px) {
+  .page {
+    width: 100%;
+  }
+
   .header {
     margin-bottom: 97px;
     width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .header__title {
+    font-size: clamp(2.8125rem, 1.358rem + 7.2727vw, 3.0625rem);
+  }
+
+  .main {
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
   .card {
@@ -416,6 +433,10 @@ dialog::backdrop {
     margin-left: 0;
   }
 
+  .modal__window {
+    width: clamp(20rem, 12.3636rem + 38.1818vw, 21.3125rem);
+  }
+
   .modal__window-content {
     margin-left: 42px;
     margin-right: 30px;
@@ -423,5 +444,6 @@ dialog::backdrop {
   
   .modal__button {
     margin-left: 42px;
+    width: clamp(12.5rem, -8.2273rem + 103.6364vw, 16.0625rem);
   }
 }
