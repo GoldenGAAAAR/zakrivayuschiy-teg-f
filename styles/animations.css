@@ -12,3 +12,103 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+@keyframes moving_pointer {
+    0% {
+        left: -20px;
+    }
+
+    100% {
+        left: -16px;
+    }
+}
+
+@keyframes heart_scale {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+@keyframes heart_sparks {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+.sparks {
+    fill: var(--fill-color);
+    opacity: 0;
+}
+
+.card__icon-button .core {
+    fill: var(--background-color);
+    transition: fill 0.3s;
+    transition-delay: 0.05s;
+  }
+  
+.card__icon-button .main-body {
+    fill: var(--background-color);
+    transition: fill 0.3s;
+  }
+  
+.card__icon-button .contour {
+    fill: var(--contour-color);
+    transition: fill 0.1s;  
+  }
+
+.card__icon-button:hover .core {
+    fill: var(--contour-color);
+    transition: fill 0.3s; 
+  }
+  
+.card__icon-button:hover .main-body {
+    fill: var(--contour-color);
+    transition: fill 0.3s;
+    transition-delay: 0.05s;
+  }
+  
+.card__icon-button:active .core {
+    fill: var(--fill-color);
+    transition: fill 0.3s; 
+  }
+  
+.card__icon-button:active .main-body {
+    fill: var(--fill-color);
+    transition: fill 0.3s;
+    transition-delay: 0.05s;
+  }
+  
+.like-icon.is-liked .core {
+    fill: var(--fill-color);
+    transition: fill 0.3s; 
+  }
+  
+.like-icon.is-liked .main-body {
+    fill: var(--fill-color);
+    transition: fill 0.3s;
+    transition-delay: 0.05s;
+  }
+  
+.like-icon.is-liked .contour {
+    fill: var(--fill-color);
+    transition: fill 0.3s;
+    transition-delay: 0.06s;
+  }
+
+.like-icon.is-liked .heart {
+    animation: heart_scale 0.3s alternate ease-in;
+    animation-delay: 0.1s;
+    transform-origin: center;
+  }
+
+.like-icon.is-liked .sparks {
+    animation: heart_sparks 0.3s alternate ease-in;
+    animation-delay: 0.3s;
+    transform-origin: center;
+}
