@@ -14,6 +14,11 @@
 
 */
 
+html {
+  display: flex;
+  justify-content: center;
+}
+
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -57,7 +62,6 @@
 
 .theme-menu {
   margin-bottom: 10px;
-  width: 84px;
   text-align: left;
 }
 
@@ -71,6 +75,7 @@
   position: relative;
   padding: 0px;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 .theme-menu__button:disabled {
@@ -151,6 +156,8 @@
 .card__image {
   max-width: 100%;
   display: block;
+  object-fit: cover;
+  object-position: center;
 }
 
 .card__image-label {
@@ -212,6 +219,7 @@
   margin-right: 25px;
   text-align: center;
   position: relative;
+  cursor: pointer;
 }
 
 .button__text {
@@ -229,6 +237,7 @@
   margin-bottom: 25px;
   margin-right: 6px;
   height: 36px;
+  cursor: pointer;
 }
 
 .card__icon-button:focus {
@@ -280,6 +289,7 @@
   flex-direction: row;
   gap: 8px;
   position: relative;
+  cursor: pointer;
 }
 
 .save__button .button__text {
@@ -349,6 +359,7 @@ dialog::backdrop {
   margin-left: 30px;
   position: relative;
   margin-bottom: 28px;
+  cursor: pointer;
 }
 
 /* -- фильтры -- */
